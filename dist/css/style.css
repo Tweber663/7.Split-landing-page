@@ -23,6 +23,7 @@ body {
   background: url("/ps5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  transition: width 350ms ease;
 }
 
 .split.left::before {
@@ -48,14 +49,34 @@ body {
   background: url("/xbox.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  transition: width 350ms ease;
 }
 
 .btn {
   position: absolute;
-  top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, 50%);
   text-decoration: none;
+  color: white;
+  border: 3px solid white;
+  width: 180px;
+  height: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.split.left .btn:hover {
+  background-color: rgb(33, 30, 170);
+  border-color: rgb(33, 30, 170);
+}
+
+.split.right .btn:hover {
+  background-color: rgb(28, 122, 18);
+  border-color: rgb(28, 122, 18);
 }
 
 h1 {
@@ -66,6 +87,22 @@ h1 {
   top: 30%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+
+.hover-left .left {
+  width: 70%;
+}
+
+.hover-left .right {
+  width: 30%;
+}
+
+.hover-right .right {
+  width: 70%;
+}
+
+.hover-right .left {
+  width: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */
